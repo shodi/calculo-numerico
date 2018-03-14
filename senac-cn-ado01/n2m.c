@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lib.h"
 
 int main(int argc, char **argv) {
@@ -13,7 +14,11 @@ int main(int argc, char **argv) {
         printf("Representacao do valor invalida\n");
         exit(1);
     }
-    baseN = atoi(argv[2]);
-    baseM = atoi(argv[3]);
+    baseN = get_integer_value(argv[2]);
+    baseM = get_integer_value(argv[3]);
+    if(baseN == -1 || baseM == -1) {
+        printf("Base inesistente\n");
+        exit(1);
+    }
     exit(0);
 }

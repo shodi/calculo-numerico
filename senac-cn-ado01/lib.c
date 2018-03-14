@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 int sum(int a, int b) {
     return a + b;
 }
@@ -19,9 +21,9 @@ int get_integer_value(char *number) {
     short unsigned int i = 0;
     while(number[i] != '\0') {
         if(number[i] < 48 || number[i] > 57) {
-
+            return -1;
         }
         i++;
     }
-    return 1;
+    return atoi(number);
 }
