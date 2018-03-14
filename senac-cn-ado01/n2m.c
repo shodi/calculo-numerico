@@ -20,5 +20,6 @@ int main(int argc, char **argv) {
         printf("Base inesistente\n");
         exit(1);
     }
+    
     exit(0);
 }
