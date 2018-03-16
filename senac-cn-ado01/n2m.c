@@ -20,6 +20,6 @@ int main(int argc, char **argv) {
         printf("Base inesistente\n");
         exit(1);
     }
-    
+    printf("valor na base decimal: %d\n", baseN_to_10(representation, baseN));
     exit(0);
 }
