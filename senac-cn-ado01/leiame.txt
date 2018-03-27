@@ -1,0 +1,6 @@
+Esse algoritmo tem como objetivo converter um numero x na base n para a base m, 
+para todo n e m pertencentes ao conjunto dos inteiros, tal que 2 <= n <= 36 e 2 <= m <= 36.
+Para os casos de aceite estão os casos onde a base esta dentro da range supracitada, algarismos inputados
+pertencem aos algarismos da base em questão, entre outras verificações que são necessárias, antes
+que a conversão seja de fato realizada.
+Para a conversão foram utilizadas a tabela ascii. 
