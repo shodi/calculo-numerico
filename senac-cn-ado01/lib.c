@@ -30,7 +30,7 @@ int check_representation(char *input, int base) {
     return 1;
 }
 
-int get_integer_value(char *number) {
+long long int get_integer_value(char *number) {
     register short unsigned int i = 0;
     while(number[i] != '\0') {
         if(number[i] < 48 || number[i] > 57) {
@@ -41,7 +41,7 @@ int get_integer_value(char *number) {
     return atoi(number);
 }
 
-long int power(int base, int exponent) {
+long long int power(long long int base, int exponent) {
     if (exponent == 0)
         return 1;
     else
@@ -54,9 +54,9 @@ int get_int_from_char(char value) {
     else return (value >= 65 && value <= 90) ? value - 55 : value - 87;
 }
 
-int baseN_to_10(char *number, int base) {
+long long int baseN_to_10(char *number, long long int base) {
     register int i = 0;
-    long int result = 0;
+    long long int result = 0;
     unsigned short int exponent = 0;
     int is_negative = 0;
     while(number[i] != '\0') i++;
@@ -69,14 +69,14 @@ int baseN_to_10(char *number, int base) {
     return result * (is_negative == 1 ? -1 : 1);
 }
 
-char* itoa(int value, char* result, int base) {
+char* itoa(long long int value, char* result, int base) {
     // check that the base if valid
     if (base < 2 || base > 36) { 
         *result = '\0'; 
         return result; 
     }
     char* ptr = result, *ptr1 = result, tmp_char;
-    int tmp_value;
+    long long int tmp_value;
 
     do {
         tmp_value = value;
@@ -95,6 +95,6 @@ char* itoa(int value, char* result, int base) {
     return result;
 }
 
-void base10_to_N(int number, char* buffer, int base_n) {
+void base10_to_N(long long int number, char* buffer, int base_n) {
     itoa(number, buffer, base_n);
 }

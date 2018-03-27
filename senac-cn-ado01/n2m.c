@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv) {
     char *representation;
-    int baseN, baseM;
+    long long int baseN, baseM;
     if (argc != 4) {
         // printf("Erro nos valores inputados\n");
         exit(1);
