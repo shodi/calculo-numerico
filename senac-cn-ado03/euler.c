@@ -12,28 +12,21 @@ void open_file_connection(FILE *fp, char *output_name, char *data_type) {
 }
 
 int main(void) {
-    FILE *fp = NULL;
-    long double a = 1;
-    open_file_connection(fp, "float_file", "float");
-    for(; a <= _MAX_ITERATION; a *= 10) {
-        get_euler_float(fp, a);
+    FILE *fp_float, *fp_double, *fp_long_double;
+    fp_float = fp_double = fp_long_double = NULL;
+    long double iterator = 1;
+    open_file_connection(fp_float, "float_file", "float");
+    open_file_connection(fp_double, "double_file", "double");
+    open_file_connection(fp_long_double, "long_double_file", "long_double");
+    for(; iterator <= _MAX_ITERATION; iterator *= 10) {
+        printf("iter_index: %.0Lf\tfloat: %.5 lf\tlong double: %.5Lf\n", get_euler_float(fp_float, a), get_euler_double(fp_double, a), get_euler_long_double(fp_long_double, a)));
     }
-    fprintf(fp, "e\n");
-    pclose(fp);
-        // a = 1;
-        // open_file_connection(fp, "double_file", "double");
-        // for(; a <= _MAX_ITERATION; a *= 10) {
-        //     get_euler_double(fp, a);
-        // }
-        // fprintf(fp, "e\n");
-        // pclose(fp);
-        // a = 1;
-        // open_file_connection(fp, "long_double_file", "LongDouble");
-        // for(; a <= _MAX_ITERATION; a *= 10) {
-        //     get_euler_long_double(fp, a);
-        // }
-        // fprintf(fp, "e\n");
-        // pclose(fp);
+    fprintf(fp_float, "e\n");
+    fprintf(fp_double, "e\n");
+    fprintf(fp_long_double, "e\n");
+    pclose(fp_float);
+    pclose(fp_double);
+    pclose(fp_long_double);
     exit(0);
 
 }
