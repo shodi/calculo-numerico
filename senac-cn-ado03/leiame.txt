@@ -1,0 +1,3 @@
+Para realizacao desta atividade utilizei como base para o calculo do numero de euler
+a definicao por limite (1 + 1/n)^n com n tendendo ao infinito, porem nesse caso
+o n varia de 1 a 10^20, e a cada iteracao é multiplicado o valor do contador por 10

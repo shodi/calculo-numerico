@@ -1,0 +1,2 @@
+Nesse programa, temos uma implementacao propria (sem auxilio da math.h) das funcoes seno e cosseno,
+utilizando os conceitos de serie de taylor.
