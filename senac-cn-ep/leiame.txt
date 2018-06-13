@@ -1,0 +1,4 @@
+para rodar o programa é necessário, num arquivo de texto, passar as seguintes informações:
+número de páginas e a matriz que represente uma rede de páginas, como no exemplo ep.txt
+como saída o programa dará os pesos de cada página, quanto maior o valor, consequentemente,
+maior o peso.
